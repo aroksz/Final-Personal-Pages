@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Helper | Moses Yang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="brand">
+      <img src="assets/school-helper-logo.svg" alt="School Helper A+ paper logo" class="logo" />
+      <div>
+        <p class="eyebrow">Moses Yang presents</p>
+        <h1>SCHOOL<br><span>HELPER</span></h1>
+        <p class="tagline">Practice smarter. Remember more. Stay organized.</p>
+      </div>
+    </div>
+    <div class="school-symbols" aria-label="school ruler and apple decoration">
+      <div class="ruler">1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6</div>
+      <div class="apple">🍎</div>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card" id="quizCard">
+      <div class="card-title"><span class="icon">🧠</span><h2>Practice Quiz</h2></div>
+      <p>Create a mini practice test to prepare for the real one.</p>
+      <div id="quizBox" class="panel"></div>
+      <div class="actions">
+        <button id="newQuiz">New Question</button>
+        <button id="checkQuiz" class="secondary">Check Answer</button>
+      </div>
+      <p id="quizFeedback" class="feedback"></p>
+    </section>
+
+    <section class="card">
+      <div class="card-title"><span class="icon">🗂️</span><h2>Flashcards</h2></div>
+      <p>Import definitions and words to help you memorize them.</p>
+      <div class="flashcard" id="flashcard" tabindex="0">
+        <div class="flash-inner">
+          <div class="flash-front" id="flashFront">Photosynthesis</div>
+          <div class="flash-back" id="flashBack">How plants convert light energy into chemical energy.</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="prevCard" class="secondary">Previous</button>
+        <button id="flipCard">Flip</button>
+        <button id="nextCard" class="secondary">Next</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-title"><span class="icon">✅</span><h2>Homework Tracker</h2></div>
+      <p>Put in homework assignments so you never forget them again.</p>
+      <form id="homeworkForm" class="stack">
+        <input id="homeworkInput" type="text" placeholder="e.g. Finish math worksheet" required />
+        <button type="submit">Add Assignment</button>
+      </form>
+      <ul id="homeworkList" class="task-list"></ul>
+    </section>
+
+    <section class="card">
+      <div class="card-title"><span class="icon">⏱️</span><h2>Study Timer</h2></div>
+      <p>A timer to help you track study sessions and other purposes.</p>
+      <div class="timer" id="timerDisplay">25:00</div>
+      <div class="actions wrap">
+        <button id="startTimer">Start</button>
+        <button id="pauseTimer" class="secondary">Pause</button>
+        <button id="resetTimer" class="secondary">Reset</button>
+      </div>
+      <label class="mini-label">Minutes <input id="timerMinutes" type="number" min="1" max="180" value="25" /></label>
+    </section>
+
+    <section class="card chat-card">
+      <div class="card-title"><span class="icon">🤖</span><h2>AI Chatbot</h2></div>
+      <p>Ask it a school question and get a helpful response.</p>
+      <div id="chatMessages" class="chat-messages">
+        <div class="bubble bot">Hi! I’m School Helper Bot. Ask me about homework, studying, math, science, or vocabulary.</div>
+      </div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="Ask a question..." autocomplete="off" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <section class="card book-card">
+      <div class="card-title"><span class="icon">📖</span><h2>Knowledge Book</h2></div>
+      <p>Open a quick-reference book for useful school facts.</p>
+      <div class="book" id="book">
+        <div class="page left-page"><h3>Math</h3><p>Area of a circle: A = πr²</p><p>Pythagorean theorem: a² + b² = c²</p></div>
+        <div class="page right-page"><h3>Science</h3><p>Water: H₂O</p><p>Speed = distance ÷ time</p></div>
+      </div>
+      <button id="nextBook">Turn Page</button>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Moses Yang</strong><span>•</span><strong>School Helper</strong><span>•</span><span>Knowledge Quiz</span><span>•</span><span>Flashcards</span><span>•</span><span>Homework Tracker</span><span>•</span><span>Study Timer</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
